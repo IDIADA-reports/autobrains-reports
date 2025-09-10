@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* Styling for the Navbar */
+        #navbar {
+            position: fixed;       /* Keep the navbar fixed at the top */
+            top: 0;                /* Set the navbar at the top of the page */
+            left: 0;               /* Align it to the left edge */
+            width: 100%;           /* Ensure it spans the entire width of the page */
+            height: 50px;
+            background-color: #333;
+            overflow: hidden;
+            z-index: 1000;         /* Ensure the navbar is on top of other content */
+            padding: 10px 0;       /* Adjust the padding to make it look nice */
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+            background-color: #333;
+        }
+
+        #navbar a:hover {
+            background-color: #333;
+            color: black;
+        }
+
+        /* Logo styling */
+        #logo {
+            height: 50px; /* Set the height of the logo */
+            width: 100px; /* Keep the aspect ratio of the logo */
+            margin-right: 10px;        /* Push the logo to the far right */
+            background: transparent; /* Ensure the background is transparent */
+        }
+
+        /* Styling for the table */
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 30px auto;  /* Center the table on the page */
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar">
+        <img id="logo" src="logo.png"; >
+        <a href="index.html" style="font-weight: bold;">Home</a>
+
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+        <br><br><br>
+        <h1>Kinematics Analysis Report</h1>
+        <hr style="border: 1px solid #2c3e50; margin-top: 20px; margin-bottom: 20px;"> <!-- Simple line with custom style -->
+        
+        <table>
+            <thead>
+                <tr>
+                    <th><a href="executive_report.html">Executive Report</a></th>
+                    <th><a href="short_executive_report.html">Executive Report (x < 30 m)</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>Report containing an executive summary from all tests</td>
+                <td>Report containing an executive summary from all tests considering distances between 0 to 30 m</td>
+
+            </tbody>
+        </table>
+        <p>Click on the links in the table to visualize the test results:</p>
+
+        <!-- Table with test names -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Target type</th>
+                    <th>Test Scenario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Environmental (FP)</strong></td>
+                    <td>
+                        <a href="guardrail_ped.html">Curved road with guard pipes and a stationary pedestrian</a><br>
+                        <a href="guardrail_bycl.html">Curved road with guard pipes and a stationary bicycle</a><br>
+                        <a href="change_lane.html">Lane change due a road obstruction</a><br>
+                        <a href="Intersection_Left_30_0.html">Turn at intersection</a><br>
+                        <a href="Fordward_right_30_10.html">Turn of a forward vehicle</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Vehicle (40 km/h)</strong></td>
+                    <td>
+                        <a href="2_Vhc_same_direction_40_0_right.html">Vehicle target Right (Ego speed = 40 km/h)</a><br>
+                        <a href="2_Vhc_same_direction_40_0_left.html">Vehicle target Left (Ego speed = 40 km/h)</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Vehicle (60 km/h)</strong></td>
+                    <td>
+                        <a href="2_Vhc_same_direction_60_0_right.html">Vehicle target Right (Ego speed = 60 km/h)</a><br>
+                        <a href="2_Vhc_same_direction_60_0_left.html">Vehicle target Left (Ego speed = 60 km/h)</a><br>  
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Pedestrian (40 km/h)</strong></td>
+                    <td>
+                        <a href="ped_40kph_right.html">Pedestrian target Right (Ego speed = 40 km/h)</a><br>
+                        <a href="ped_40kph_left.html">Pedestrian target Left (Ego speed = 40 km/h)</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Pedestrian (60 km/h)</strong></td>
+                    <td>
+                        <a href="ped_60kph_right.html">Pedestrian target Right (Ego speed = 60 km/h)</a><br>
+                        <a href="ped_60kph_left.html">Pedestrian target Left (Ego speed = 60 km/h)</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Bicycle (40 km/h)</strong></td>
+                    <td>
+                        <a href="2_bycl_40_back_right.html">Bicycle target Right (Ego speed = 40 km/h)</a><br>
+                        <a href="2_bycl_40_back_left.html">Bicycle target Left (Ego speed = 40 km/h)</a><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Bicycle (60 km/h)</strong></td>
+                    <td>
+                        <a href="2_bycl_60_back_right.html">Bicycle target Right (Ego speed = 60 km/h)</a><br>
+                        <a href="2_bycl_60_back_left.html">Bicycle target Left (Ego speed = 60 km/h)</a><br>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
