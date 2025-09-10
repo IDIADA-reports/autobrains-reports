@@ -1,0 +1,24 @@
+table, img {
+    page-break-inside: avoid !important;  /* Prevents splitting */
+}
+
+tr, td, th {
+    page-break-inside: avoid;  /* Ensures rows and columns stay intact */
+}
+
+.image-container {
+    page-break-inside: avoid;
+    display: block; /* Ensures images behave properly */
+    width: 100%;
+}
+
+#navbar, #navbar_bottom {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+h2 {
+    page-break-before: always; /* Forces H1 and H2 to start on a new page */
+}
